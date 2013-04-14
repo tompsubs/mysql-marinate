@@ -1,9 +1,46 @@
 1. What do we mean when we say that MySQL has a client-server architecture?
 
+MySQL has a client-server architecture; clients connect to the server to perform database
+operations such as reading or storing data. There are many MySQL clients available,
+including some that have graphical interfaces.
+
 2. Use the monitor help to look up information on the SELECT statement. (We’ll discuss SELECT in detail in Chapter 5.)
+
+mysql> HELP SELECT;
+Name: 'SELECT'
+Description:
+Syntax:
+SELECT
+    [ALL | DISTINCT | DISTINCTROW ]
+      [HIGH_PRIORITY]
+      [STRAIGHT_JOIN]
+      [SQL_SMALL_RESULT] [SQL_BIG_RESULT] [SQL_BUFFER_RESULT]
+      [SQL_CACHE | SQL_NO_CACHE] [SQL_CALC_FOUND_ROWS]
+    select_expr [, select_expr ...]
+    [FROM table_references
+    [WHERE where_condition]
+    [GROUP BY {col_name | expr | position}
+      [ASC | DESC], ... [WITH ROLLUP]]
+    [HAVING where_condition]
+    [ORDER BY {col_name | expr | position}
+      [ASC | DESC], ...]
+and on and on......
+
 
 3. What is the difference between using the monitor in interactive mode and using
 the monitor in batch mode?
 
+In interactive
+mode, you type in SQL queries or MySQL commands such as SHOW DATABASES at the
+MySQL prompt, and view the results.
+In batch mode, you tell the monitor to read in and execute a list of commands from a
+file. This is useful when you need to run a large set of operations—for example, when
+you want to restore a database from a backup file. It’s also useful when you need to
+run a particular sequence of operations frequently; you can save the commands in a
+file and then tell the monitor to read in the file whenever you need it.
+
+
 4. What do the monitor user, password, and database options do?
+
+The user option is followed by your mysql username, if nothing is specified mysql assumes the user is root. password is followed by your mysql password The database option allows you to identifiy the database to use.
 
